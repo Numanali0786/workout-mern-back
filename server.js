@@ -10,12 +10,12 @@ const cors = require("cors");
 const app = express();
 
 // middleware
-app.use(
-  cors({
-    origin: "https://workout-react-front.onrender.com",
-    // origin: "https://gym2-mw7i.onrender.com",
-  })
-);
+// app.use(
+//   cors({
+//     origin: "https://workout-react-front.onrender.com",
+//     // origin: "https://gym2-mw7i.onrender.com",
+//   })
+// );
 app.use(express.json());
 
 app.use((req, res, next) => {
