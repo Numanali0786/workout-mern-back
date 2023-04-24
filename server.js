@@ -10,12 +10,14 @@ const cors = require("cors");
 const app = express();
 
 // middleware
-// app.use(
-//   cors({
-//     origin: "https://workout-react-front.onrender.com",
-//     // origin: "https://gym2-mw7i.onrender.com",
-//   })
-// );
+
+//FOR  DEPLOY
+app.use(
+  cors({
+    origin: "https://workout-react-front.onrender.com",
+    // origin: "https://gym2-mw7i.onrender.com",
+  })
+);
 app.use(express.json());
 
 app.use((req, res, next) => {
@@ -30,7 +32,7 @@ app.use("/api/user", userRoutes);
 app.get("/", (req, res) => {
   res.send("home");
 });
-// connect to +
+// connect to
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
