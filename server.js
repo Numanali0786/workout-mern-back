@@ -12,6 +12,7 @@ const app = express();
 // middleware
 
 //FOR  DEPLOY
+
 app.use(
   cors({
     origin: "https://workout-react-front.onrender.com",
